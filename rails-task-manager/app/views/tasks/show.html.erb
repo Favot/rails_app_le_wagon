@@ -1,0 +1,21 @@
+<h1><%= @task["name"] %></h1>
+
+
+<ul>
+  <li><h2>
+  <%= @task["title"] %>
+  </h2></li> 
+  <li><p>
+   <%= @task["details"] %>
+ </li>
+ <li>
+ <%= check_box_tag "checked[##{@task.id}]","#{@task.id}{}", @task.completed %>
+ </li>
+</ul>
+
+<%= link_to "Delete",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+<%= link_to "Edit", edit_path(@task.id) %>
+<%= link_to "Back", root_path %>

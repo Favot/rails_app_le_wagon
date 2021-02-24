@@ -1,0 +1,29 @@
+<ul>
+  <li><h2>
+  <%= @restaurant["name"] %>
+  </h2></li> 
+  <li><p>
+   <%= @restaurant["address"] %>
+ </p></li>
+ <li><p>
+   <%= @restaurant["phone_number"] %>
+ </p></li>
+ <li><p>
+   <%= @restaurant["category"] %>
+ </p></li>
+
+
+ <ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">
+    <p><%= review.content %></p>
+    <p><%= review.rating %></p>
+    
+  <% end %>
+</ul>
+ 
+</ul>
+
+<%= link_to 'New Review', new_restaurant_review_path(@restaurant) %> |
+
+<%= link_to 'Back', restaurants_path %>

@@ -1,0 +1,16 @@
+
+<ul>
+  <% @reviews.each do |review| %>
+  <%= link_to "test", restaurant_review_path(review.id) , class: "btn btn-primary"%>
+
+    <li><%= review.rating %>   
+    </li>
+    <li><%= review.content %>   </li>
+
+
+
+
+    
+    </li>
+  <% end %>
+</ul>
