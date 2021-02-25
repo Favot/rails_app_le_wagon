@@ -1,0 +1,19 @@
+<div class="page-container padder">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-name">
+            <%= cocktail.name %>
+          </div>
+         
+            <%= link_to 'Show', cocktail_path(cocktail), class: "btn btn-primary" %>
+            <%= link_to 'Create a dose', new_cocktail_dose_path(cocktail), class: "btn btn-info" %>
+            <%= link_to 'Delete', cocktail_path(cocktail), class: "btn btn-danger", method: :delete%>
+        </div>
+      </div>
+    <% end %>
+
+    <%= link_to 'Create a Cocktail', new_cocktail_path, class: "btn btn-info" %>
+  </div>
+</div>
