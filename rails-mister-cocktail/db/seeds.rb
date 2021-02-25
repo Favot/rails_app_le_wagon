@@ -12,4 +12,4 @@ Ingredient.create(name: 'mint leaves')
 
 Cocktail.create(name: 'Mojito')
 
-Dose.create(description: '6 leaces', cocktai_id: Cocktail.last, ingredient_id: Ingredient.last)
+Dose.create(description: '6 leaces', cocktail_id: Cocktail.last, ingredient_id: Ingredient.last)
