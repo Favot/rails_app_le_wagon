@@ -55,3 +55,6 @@ gem 'simple_form'
 
 gem 'open-uri', '~> 0.1.0'
 gem 'json', '~> 2.5', '>= 2.5.1'
+
+
+gem 'select2-rails', '~> 4.0', '>= 4.0.13'

@@ -167,6 +167,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    select2-rails (4.0.13)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -221,6 +222,7 @@ DEPENDENCIES
   rails-controller-testing
   rspec-rails
   sass-rails (>= 6)
+  select2-rails (~> 4.0, >= 4.0.13)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)

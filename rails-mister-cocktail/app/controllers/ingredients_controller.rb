@@ -13,6 +13,16 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new
   end
 
+  def create
+    @ingredient = Ingredient.new(@ingredient_params)
+
+    if @ingredient.save!
+      redirect_to @ingredient
+    else
+      render :new
+    end
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -23,6 +33,6 @@ class IngredientsController < ApplicationController
   # Only allow a list of trusted parameters through.
 
   def ingredient_params
-    params.require(:name)
+    params.require(:ingredient).permit(:name)
   end
 end
